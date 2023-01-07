@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="window_styles.css">
-    <link rel="stylesheet" href="window_toolbar_styles.css">
-  </head>
-  <body>
-    <div class="window-toolbar">
-      <button style="color: white" onclick="window.api.minimize()">minimize</button>
-      <button style="color: white" onclick="window.api.maximize()">maximize</button>
-      <button style="color: white" onclick="window.api.close()">close</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="window_styles.css">
+  <link rel="stylesheet" href="window_toolbar_styles.css">
+  <script type="module" src="style.js"></script>
+  <script type="module" src="init.js"></script>
+</head>
+
+<body>
+  <div class="window-toolbar">
+    <div class="window-toolbar-menu"></div>
+    <div class="window-control-buttons">
+      <button class="window-minimize-button" onclick="window.api.minimize()">
+        <div></div>
+      </button>
+      <button class="window-maximize-button" onclick="window.api.maximize()">
+        <div></div> <!--TODO add button minimize/maximize icon -->
+      </button>
+      <button class="window-close-button" onclick="window.api.close()">
+        <div>
+          <div></div>
+        </div>
+      </button>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

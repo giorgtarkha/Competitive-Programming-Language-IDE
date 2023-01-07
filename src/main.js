@@ -18,24 +18,17 @@ const createWindow = () => {
   });
 
   ipcMain.on('minimize', (event) => {
-    const webContents = event.sender
-    const win = BrowserWindow.fromWebContents(webContents)
-    if (win.isMinimizable() && !win.isMinimized) {
-      win.minimize();
-    }
+    const win = BrowserWindow.fromWebContents(event.sender);
+    win.minimize();
   });
 
   ipcMain.on('maximize', (event) => {
-    const webContents = event.sender
-    const win = BrowserWindow.fromWebContents(webContents)
-    if (win.isMaximizable() && !win.isMaximized) {
-      win.maximize();
-    }
+    const win = BrowserWindow.fromWebContents(event.sender);
+    win.maximize();
   });
 
   ipcMain.on('close', (event) => {
-    const webContents = event.sender
-    const win = BrowserWindow.fromWebContents(webContents)
+    const win = BrowserWindow.fromWebContents(event.sender);
     win.close();
   });
 

@@ -1,9 +1,77 @@
 .window-toolbar {
-    height: 30px;
-    background-color: red;
+    height: 35px;
+    display: flex;
     -webkit-app-region: drag;
+    background-color: var(--window-toolbar-background-color);
 }
 
-.window-toolbar > button {
+.window-control-buttons {
     -webkit-app-region: no-drag;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin-left: auto;
+}
+
+.window-control-buttons>button {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 0;
+    width: 60px;
+    background-color: transparent;
+    transition: ease 0.25s;
+}
+
+.window-control-buttons>button:hover {
+    background-color: var(--window-toolbar-button-hover-background-color);
+}
+
+.window-minimize-button>div {
+    width: 10px;
+    height: 1px;
+    background-color: var(--window-toolbar-text-color);
+}
+
+.window-minimize-button:hover>div {
+    background-color: var(--window-toolbar-button-hover-text-color);
+}
+
+.window-maximize-button>div {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid var(--window-toolbar-text-color);
+}
+
+.window-maximize-button:hover>div {
+    border: 1px solid var(--window-toolbar-button-hover-text-color);
+}
+
+.window-close-button:hover {
+    background-color: var(--window-toolbar-close-button-hover-background-color) !important;
+}
+
+.window-close-button>div {
+    width: 1px;
+    height: 15px;
+    background-color: var(--window-toolbar-text-color);
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.window-close-button:hover>div {
+    background-color: var(--window-toolbar-close-button-hover-text-color) !important;
+}
+
+.window-close-button>div>div {
+    width: 1px;
+    height: 15px;
+    background-color: var(--window-toolbar-text-color);
+    transform: rotate(90deg);
+    z-index: 2;
+}
+
+.window-close-button:hover>div>div {
+    background-color: var(--window-toolbar-close-button-hover-text-color) !important;
 }
