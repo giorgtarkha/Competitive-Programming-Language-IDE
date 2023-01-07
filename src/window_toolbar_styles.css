@@ -1,0 +1,9 @@
+.window-toolbar {
+    height: 30px;
+    background-color: red;
+    -webkit-app-region: drag;
+}
+
+.window-toolbar > button {
+    -webkit-app-region: no-drag;
+}
